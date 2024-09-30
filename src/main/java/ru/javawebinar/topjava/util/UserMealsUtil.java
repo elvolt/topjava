@@ -33,8 +33,7 @@ public class UserMealsUtil {
         Map<LocalDate, Integer> dateToCalories = new HashMap<>();
         for (UserMeal meal : meals) {
             LocalDate date = meal.getDateTime().toLocalDate();
-            int cntCalories = dateToCalories.getOrDefault(date, 0);
-            dateToCalories.put(date, cntCalories + meal.getCalories());
+            dateToCalories.put(date, dateToCalories.getOrDefault(date, 0) + meal.getCalories());
         }
 
         List<UserMealWithExcess> userMealsWithExcess = new ArrayList<>();
