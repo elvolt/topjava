@@ -41,7 +41,11 @@ public class MealsUtil {
                 .collect(Collectors.toList());
     }
 
-    private static MealTo createTo(Meal meal, boolean excess) {
+    public static List<MealTo> filteredByStreams(List<Meal> meals, int caloriesPerDay) {
+        return filteredByStreams(meals, LocalTime.of(0, 0), LocalTime.of(23, 59), caloriesPerDay);
+    }
+
+    public static MealTo createTo(Meal meal, boolean excess) {
         return new MealTo(meal.getDateTime(), meal.getDescription(), meal.getCalories(), excess);
     }
 }
