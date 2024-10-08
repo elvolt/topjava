@@ -10,7 +10,7 @@
 <hr>
 <h2>Meals</h2>
 <div>
-    <h3><a href="meals/edit.jsp">Add meal</a></h3>
+    <h3><a href="meals/edit">Add meal</a></h3>
 </div>
 <div>
     <table border="1" align="left" cellpadding="10px" style="border-collapse: collapse">

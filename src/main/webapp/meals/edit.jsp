@@ -7,11 +7,11 @@
 <body>
 <h3><a href="../index.html">Home</a></h3>
 <div>
-    <form method="POST" action="/topjava/meals">
+    <form method="POST" action="<%=request.getContextPath()%>/meals">
         DateTime : <input type="datetime-local" name="dateTime"><br/>
         Description : <input type="text" name="description"/> <br/>
-        Calories : <input type="text" name="calories"/> <br/>
-        <input type="submit" value="Submit" />
+        Calories : <input type="number" name="calories"/> <br/>
+        <input type="submit" value="Submit"/>
     </form>
 </div>
 </body>
